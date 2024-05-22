@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Loop For dalam HTML</title>
+</head>
+<body>
+    <h1>Daftar Angka</h1>
+    <ul id="numberList"></ul>
+
+    <script>
+        // Mengakses elemen dengan id 'numberList'
+        const numberList = document.getElementById('numberList');
+
+        // Menggunakan loop for untuk menghasilkan angka dari 1 hingga 10
+        for (let i = 1; i <= 10; i++) {
+            // Membuat elemen list item (li)
+            const listItem = document.createElement('li');
+            // Menetapkan teks dari list item menjadi angka saat ini
+            listItem.textContent = i;
+            // Menambahkan list item ke dalam elemen ul
+            numberList.appendChild(listItem);
+        }
+    </script>
+</body>
+</html>

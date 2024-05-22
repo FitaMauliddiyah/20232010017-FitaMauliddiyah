@@ -1,0 +1,111 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Input Nilai Mahasiswa</title>
+    
+</head>
+<body>
+    <!-- Index Page Content -->
+    <div id="indexPage">
+        <h1>Input Nilai Mahasiswa</h1>
+        <form id="inputForm">
+            <label for="nim">NIM:</label>
+            <input type="text" id="nim" name="nim" required><br><br>
+            
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required><br><br>
+            
+            <label for="matakuliah">Mata Kuliah:</label>
+            <select id="matakuliah" name="matakuliah" required>
+                <option value="Matematika">Matematika</option>
+                <option value="Fisika">Fisika</option>
+                <option value="Kimia">Kimia</option>
+                <option value="Biologi">Biologi</option>
+                <option value="Bahasa Inggris">Bahasa Inggris</option>
+                <option value="Sejarah">Sejarah</option>
+                <option value="Geografi">Geografi</option>
+                <option value="Sosiologi">Sosiologi</option>
+                <option value="Ekonomi">Ekonomi</option>
+                <option value="Teknologi Informasi">Teknologi Informasi</option>
+            </select><br><br>
+            
+            <label for="nilai">Nilai Akhir:</label>
+            <input type="number" id="nilai" name="nilai" min="0" max="100" required><br><br>
+            
+            <button type="button" onclick="tampilData()">TAMPIL</button>
+            <button type="reset">RESET</button>
+        </form>
+        
+        <div id="output">
+            <h2>Data Mahasiswa</h2>
+            <p id="dataNIM"></p>
+            <p id="dataNama"></p>
+            <p id="dataMataKuliah"></p>
+            <p id="dataNilaiAkhir"></p>
+            <p id="dataNilaiHuruf"></p>
+            <p id="dataIndeksNilai"></p>
+        </div>
+        
+    </script>
+    
+    <script>
+        function tampilData() {
+             nim = document.getElementById('nim').value;
+            nama = document.getElementById('nama').value;
+            matakuliah = document.getElementById('matakuliah').value;
+             nilai = document.getElementById('nilai').value;
+
+            let nilaiHuruf = '';
+            let indeksNilai = '';
+
+            // Memastikan nilai berada dalam rentang 0-100
+    if (nilai < 0 || nilai > 100) {
+        alert("Nilai harus berada dalam rentang 0 hingga 100");
+        return;
+    }
+            
+            if(nilai >= 85) {
+                nilaiHuruf = 'A';
+                indeksNilai = '4.00 - Pujian';
+            } else if (nilai >= 79) {
+                nilaiHuruf = 'A-';
+                indeksNilai = '3.67 - Sangat Memuaskan';
+            } else if (nilai >= 74) {
+                nilaiHuruf = 'B+';
+                indeksNilai = '3.33 - Sangat Memuaskan';
+            } else if (nilai >= 69) {
+                nilaiHuruf = 'B';
+                indeksNilai = '3.00 - Memuaskan';
+            } else if (nilai >= 64) {
+                nilaiHuruf = 'B-';
+                indeksNilai = '2.67 - Memuaskan';
+            } else if (nilai >= 59) {
+                nilaiHuruf = 'C+';
+                indeksNilai = '2.33';
+            } else if (nilai >= 54) {
+                nilaiHuruf = 'C';
+                indeksNilai = '2.00';
+            } else if (nilai >= 41) {
+                nilaiHuruf = 'D';
+                indeksNilai = '1.00';
+            } else {
+                nilaiHuruf = 'E';
+                indeksNilai = '0.00';
+            }
+
+            document.getElementById('dataNIM').innerHTML = 'NIM: ' + nim;
+            document.getElementById('dataNama').innerHTML = 'Nama: ' + nama;
+            document.getElementById('dataMataKuliah').innerHTML = 'Mata Kuliah: ' + matakuliah;
+            document.getElementById('dataNilaiAkhir').innerHTML = 'Nilai Akhir: ' + nilai;
+            document.getElementById('dataNilaiHuruf').innerHTML = 'Nilai Huruf: ' + nilaiHuruf;
+            document.getElementById('dataIndeksNilai').innerHTML = 'Indeks Nilai: ' + indeksNilai;
+
+            document.getElementById('output').style.display = 'block';
+        }
+        
+       
+    </script>
+</body>
+</html>
