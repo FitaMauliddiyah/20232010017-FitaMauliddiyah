@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Perbandingan Operator</title>
+    <h1>Perbandingan Operator dalam JavaScript</h1>
+    <div id="demo"></div>
+    <script>
+        function compareValues() {
+            const x = 5;
+            let output = "";
+
+            // Menggunakan !=
+            output += "x != 8: " + (x != 8) + ", ";   // true
+            output += "x != 5: " + (x != 5) + ", ";   // false
+            output += "x != '5': " + (x != '5') + ", ";   // false, karena '5' dianggap sama dengan 5 setelah konversi tipe data
+
+            // Menggunakan !==
+            output += "x !== 8: " + (x !== 8) + ", ";   // true
+            output += "x !== 5: " + (x !== 5) + ", ";   // false
+            output += "x !== '5': " + (x !== '5');   // true, karena tipe data berbeda
+
+            document.getElementById("demo").innerHTML = output;
+        }
+
+        window.onload = compareValues; // Panggil fungsi compareValues saat halaman dimuat
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Statement Example</title>
+</head>
+<body>
+
+<p id="demo"></p>
+
+<script>
+    // Mendapatkan hari ini
+    let day = new Date().getDay();
+    let message;
+
+    // Menggunakan switch untuk menentukan pesan berdasarkan hari
+    switch(day) {
+        case 0:
+            message = "Hari ini adalah Minggu.";
+            break;
+        case 1:
+            message = "Hari ini adalah Senin.";
+            break;
+        case 2:
+            message = "Hari ini adalah Selasa.";
+            break;
+        case 3:
+            message = "Hari ini adalah Rabu.";
+            break;
+        case 4:
+            message = "Hari ini adalah Kamis.";
+            break;
+        case 5:
+            message = "Hari ini adalah Jumat.";
+            break;
+        case 6:
+            message = "Hari ini adalah Sabtu.";
+            break;
+        default:
+            message = "Waktu tidak valid.";
+    }
+
+    // Menyimpan pesan di dalam elemen HTML
+    document.getElementById("demo").innerHTML = message;
+</script>
+
+</body>
+</html>

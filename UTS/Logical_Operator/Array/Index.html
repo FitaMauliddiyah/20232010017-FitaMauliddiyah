@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Array Example</title>
+</head>
+<body>
+    <h1>Simple Array Example</h1>
+    <p>Enter an element to add to the array:</p>
+    <input type="text" id="element-input" placeholder="Array element">
+    <button onclick="addToArray()">Add to Array</button>
+
+    <h2>Array Elements:</h2>
+    <p id="array-list"><p>
+
+    <script>
+        // Initialize an empty array
+        let myArray = [];
+
+        // Function to add an element to the array
+        function addToArray() {
+            // Get the value from the input field
+            const element = document.getElementById('element-input').value;
+
+            // Check if the input is not empty
+            if (element !== "") {
+                // Add the element to the array
+                myArray.push(element);
+
+                // Clear the input field
+                document.getElementById('element-input').value = "";
+
+                // Display the updated array
+                displayArray();
+            } else {
+                alert('Please enter an element.');
+            }
+        }
+
+        // Function to display the array
+        function displayArray() {
+            // Get the ul element
+            const arrayList = document.getElementById('array-list');
+
+            // Clear the current list
+            arrayList.innerHTML = "";
+
+            // Loop through the array and create list items
+            myArray.forEach((item, index) => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `Index ${index}: ${item}`;
+                arrayList.appendChild(listItem);
+            });
+        }
+    </script>
+</body>
+</html>

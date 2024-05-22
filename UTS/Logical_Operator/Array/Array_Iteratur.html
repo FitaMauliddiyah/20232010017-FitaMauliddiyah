@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Iterator Object</title>
+</head>
+<body>
+    <h1>Array Iterator Object Example</h1>
+    <ul id="output"></ul>
+
+    <script>
+        // Array
+        let fruits = ['Apple', 'Banana', 'Orange', 'Mango', 'Grapes'];
+
+        // Creating an iterator object using entries() method
+        let iterator = fruits.entries();
+
+        // Iterating through the iterator object and displaying in HTML
+        let outputList = document.getElementById('output');
+        for (const [index, value] of iterator) {
+            let listItem = document.createElement('li');
+            listItem.textContent = `Index: ${index}, Value: ${value}`;
+            outputList.appendChild(listItem);
+        }
+    </script>
+</body>
+</html>
+

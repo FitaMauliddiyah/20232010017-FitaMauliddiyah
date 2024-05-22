@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh For Loop dengan Continue</title>
+</head>
+<body>
+    <h1>Contoh For Loop dengan Continue Statement</h1>
+    <p id="demo"><p>
+
+    <script>
+        for (let i = 0; i < 12; i++) {
+            if (i === 3) {
+                continue; // Melewatkan angka 3
+            }
+            // Menampilkan pesan di konsol
+            console.log("Perulangan Ke " + i);
+
+            // Menambahkan elemen ke dalam daftar di halaman
+            const listItem = document.createElement('li');
+            listItem.textContent = "Perulangan Ke " + i;
+            document.getElementById('demo').appendChild(listItem);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conditional Statements Example</title>
+</head>
+<body>
+
+<!-- Menambahkan elemen untuk menampilkan hasil -->
+<p id="demo"></p>
+
+<script>
+  // Mendefinisikan nilai variabel
+  var hour = new Date().getHours(); // Mendapatkan jam saat ini
+  var greeting;
+
+  // Menggunakan pernyataan kondisional untuk menentukan pesan sapaan
+  if (hour < 12) {
+    greeting = "Selamat pagi!";
+  } else if (hour < 18) {
+    greeting = "Selamat siang!";
+  } else {
+    greeting = "Selamat malam!";
+  }
+
+  // Menampilkan hasilnya
+  document.getElementById("demo").innerText = "Waktu saat ini: " + hour + " - " + greeting;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple HTML Example</title>
+</head>
+<body>
+    <h1>Welcome to My Simple HTML Page</h1>
+    <p>Enter your name:</p>
+    <input type="text" id="name-input" placeholder="Your name">
+    <button onclick="showMessage()">Click Me</button>
+
+    <script>
+        // Function to show a welcome message
+        function showMessage() {
+            const name = document.getElementById('name-input').value;
+            if (name) {
+                alert(`Hello, {name}! Welcome to my website.`);
+            } else {
+                alert('Please enter your name.');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator OR (||) dalam HTML</title>
+</head>
+<body>
+
+<h2>Pengecekan Kondisi dengan Operator OR (||)</h2>
+
+<p id="hasil"></p>
+
+<script>
+    var nilai = 8;
+
+    // Jika nilai kurang dari 7 atau lebih besar dari 9, kondisi menjadi benar
+    if (nilai < 7 || nilai > 9) {
+        document.getElementById("hasil").innerHTML = "Kondisi benar";
+    } else {
+        document.getElementById("hasil").innerHTML = "Kondisi salah";
+    }
+</script>
+
+</body>
+</html>

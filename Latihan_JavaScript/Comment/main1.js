@@ -1,0 +1,1 @@
+/* Jangan terlalu makan makanan cepat saji,itu tidak baik untuk kesehatan*/

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh For Loop dengan Break</title>
+</head>
+<body>
+    <h1>Daftar Angka dengan For Loop dan Break</h1>
+    <ul id="forList"></ul>
+    <p id="messageFor"></p>
+
+    <script>
+        const forList = document.getElementById('forList');
+        const messageFor = document.getElementById('messageFor');
+
+        for (let i = 1; i <= 10; i++) {
+            if (i > 5) {
+                break;
+            }
+            const listItem = document.createElement('li');
+            listItem.textContent = i;
+            forList.appendChild(listItem);
+        }
+
+        messageFor.textContent = "Perulangan berhenti karena mencapai angka lebih dari 5.";
+    </script>
+</body>
+</html>

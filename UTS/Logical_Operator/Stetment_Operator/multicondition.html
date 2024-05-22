@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Conditional Statement Example</title>
+</head>
+<body>
+
+<p id="demo"></p>
+
+<script>
+    // Mendefinisikan variabel waktu
+    let time = new Date().getHours();
+    let message;
+
+    // Menentukan pesan berdasarkan waktu
+    if (time < 12) {
+        message = "Selamat pagi!";
+    } else if (time < 18) {
+        message = "Selamat siang!";
+    } else {
+        message = "Selamat malam!";
+    }
+
+    // Menyimpan pesan di dalam elemen HTML
+    document.getElementById("demo").innerHTML = message;
+</script>
+
+</body>
+</html>

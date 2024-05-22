@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterating through an Array in HTML</title>
+</head>
+<body>
+    <h1>Iterating through an Array Example</h1>
+    <p id="demo"><p>
+
+    <script>
+        // Array
+        let fruits = ['Apple', 'Banana', 'Orange', 'Mango', 'Grapes'];
+
+        // Iterating through the array using for loop
+        let fruitList = document.getElementById('demo');
+        for (let i = 0; i < fruits.length; i++) {
+            let listItem = document.createElement('li');
+            listItem.textContent = fruits[i];
+            fruitList.appendChild(listItem);
+        }
+    </script>
+</body>
+</html>
